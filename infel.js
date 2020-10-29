@@ -3,10 +3,12 @@ const path = require('path');
 const exec = util.promisify(require('child_process').exec);
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
-const pathToCsv = path.resolve('infelData.csv');
+const CSV_PATH = 'your_path_goes_here';
+
+const pathToCsv = path.resolve(CSV_PATH);
 
 const csvWriter = createCsvWriter({
-    path: 'your_path_goes_here',
+    path: pathToCsv,
     header: [
       {id: 'isp', title: 'ISP'},
       {id: 'download', title: 'Download'},
