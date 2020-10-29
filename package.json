@@ -1,7 +1,7 @@
 {
   "name": "infel-checker",
   "version": "1.0.0",
-  "description": "Checks if Infel MK outputs slower speeds than advertised",
+  "description": "Checks if your ISP outputs slower speeds than advertised",
   "main": "infel.js",
   "scripts": {
     "test": "echo \"Does Infel test their speed?\" && exit 1"
