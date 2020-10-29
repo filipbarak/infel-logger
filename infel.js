@@ -6,7 +6,7 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 const pathToCsv = path.resolve('infelData.csv');
 
 const csvWriter = createCsvWriter({
-    path: '/home/filipbarak/code/vrati-mi-parite-infele/infelData.csv',
+    path: 'your_path_goes_here',
     header: [
       {id: 'isp', title: 'ISP'},
       {id: 'download', title: 'Download'},
@@ -18,7 +18,7 @@ const csvWriter = createCsvWriter({
 
 const getSpeed = async () => {
     console.log('Starting speedtest...');
-    const { stdout, stderr } = await exec('/usr/bin/python3 /home/filipbarak/code/speedtest-cli/speedtest.py --json');
+    const { stdout, stderr } = await exec('/usr/bin/python3 path_to_speedtest_cli/speedtest.py --json');
     const { download, upload, timestamp, client: { isp } } = JSON.parse(stdout);
     console.log('Data gathered...');
     return [{
